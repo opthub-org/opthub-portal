@@ -1,0 +1,30 @@
+{
+  "name": "@portal/universal_modules",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.1.0",
+  "scripts": {
+    "lint": "run-p -l -c --aggregate-output lint:*",
+    "lint:eslint": "eslint --quiet .",
+    "lint:prettier": "prettier --check .",
+    "fix": "run-s fix:prettier fix:eslint",
+    "fix:eslint": "eslint --quiet --fix .",
+    "fix:prettier": "prettier --write ."
+  },
+  "engines": {
+    "node": "18.x",
+    "pnpm": "8"
+  },
+  "keywords": [],
+  "dependencies": {
+    "firebase": "^10.13.1",
+    "firebase-admin": "^12.5.0",
+    "googleapis": "^144.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

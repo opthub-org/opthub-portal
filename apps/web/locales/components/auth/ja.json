@@ -1,0 +1,6 @@
+{
+  "oauth": {
+    "unexpected_error": "予期せぬエラーが発生しました。",
+    "successfully_sign_in": "ログインしました。"
+  }
+}

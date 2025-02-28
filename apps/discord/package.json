@@ -1,0 +1,16 @@
+{
+  "name": "@portal/discord",
+  "packageManager": "pnpm@8.1.0",
+  "scripts": {},
+  "engines": {
+    "node": "20",
+    "pnpm": "8"
+  },
+  "dependencies": {
+    "@portal/universal_modules": "file:../../packages/universal_modules",
+    "dotenv": "^16.4.5",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "private": true
+}

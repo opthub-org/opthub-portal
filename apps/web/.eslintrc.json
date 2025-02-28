@@ -1,0 +1,30 @@
+{
+  "extends": ["../../.eslintrc", "next", "next/core-web-vitals"],
+  "parserOptions": {
+    "project": ["./tsconfig.json"] // Specify it only for TypeScript files,
+  },
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "@mui/material",
+            "importNames": [
+              "Typography",
+              "Box",
+              "Avatar",
+              "MenuItem",
+              "CardMedia"
+            ],
+            "message": "Please use `@/components/styled` instead."
+          },
+          {
+            "name": "next/image",
+            "message": "Please use `@/components/utils/image` instead."
+          }
+        ]
+      }
+    ]
+  }
+}

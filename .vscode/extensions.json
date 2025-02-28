@@ -1,0 +1,43 @@
+{
+  "recommendations": [
+    // ESLint
+    "dbaeumer.vscode-eslint",
+
+    // Prettier
+    "esbenp.prettier-vscode",
+
+    // スペルミス検知
+    "streetsidesoftware.code-spell-checker",
+
+    // Firebase
+    "toba.vsfire",
+    "ChFlick.firecode",
+
+    // Next JS
+    "PulkitGangwar.nextjs-snippets",
+    "unifiedjs.vscode-mdx",
+    "styled-components.vscode-styled-components",
+
+    // カラーピッカー
+    "anseki.vscode-color",
+
+    // Emmet
+    "FallenMax.mithril-emmet",
+
+    // VTL記法のハイライト
+    "luqimin.velocity",
+
+    // AppSync用のVTLの補完
+    "thebenforce.appsync-resolver-autocomplete",
+
+    // GraphQLのハイライト
+    "graphql.vscode-graphql-syntax",
+    "orsenkucher.vscode-graphql",
+
+    // TODOの表示
+    "wayou.vscode-todo-highlight",
+
+    // エラーの表示
+    "usernamehw.errorlens"
+  ]
+}

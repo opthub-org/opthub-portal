@@ -1,0 +1,6 @@
+{
+  "oauth": {
+    "unexpected_error": "An unexpected error occurred.",
+    "successfully_sign_in": "Successfully signed in."
+  }
+}

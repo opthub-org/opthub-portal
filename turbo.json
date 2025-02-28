@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "tasks": {
+    "lint": {
+      "outputs": []
+    },
+    "test": {
+      "outputs": []
+    },
+    "dev": {
+      "outputs": []
+    },
+    "lint:prettier": {
+      "outputs": []
+    },
+    "lint:eslint": {
+      "outputs": []
+    },
+    "build": {
+      "dependsOn": ["lint", "^build"],
+      "outputs": [".next/**"]
+    }
+  }
+}

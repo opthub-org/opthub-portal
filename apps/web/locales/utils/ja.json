@@ -1,0 +1,14 @@
+{
+  "date": {
+    "after_seconds": "$1秒後",
+    "after_minutes": "$1分後",
+    "after_hours": "$1時間後",
+    "after_days": "$1日後",
+    "before_seconds": "$1秒前",
+    "before_minutes": "$1分前",
+    "before_hours": "$1時間前",
+    "before_days": "$1日前",
+    "month_date": "$1月$2日",
+    "year_month_date": "$1年$2月$3日"
+  }
+}

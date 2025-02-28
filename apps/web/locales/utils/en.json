@@ -1,0 +1,14 @@
+{
+  "date": {
+    "after_seconds": "$1 seconds later",
+    "after_minutes": "$1 minutes later",
+    "after_hours": "$1 hours later",
+    "after_days": "$1 days later",
+    "before_seconds": "$1 seconds ago",
+    "before_minutes": "$1 minutes ago",
+    "before_hours": "$1 hours ago",
+    "before_days": "$1 days ago",
+    "month_date": "$1/$2",
+    "year_month_date": "$1/$2/$3"
+  }
+}

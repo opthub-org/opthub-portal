@@ -1,0 +1,19 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log"
+    ],
+    "predeploy": "pnpm install --frozen-lockfile && pnpm --filter functions build",
+    "source": "apps/functions"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

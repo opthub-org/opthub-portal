@@ -1,0 +1,40 @@
+{
+  "name": "portal",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@8.1.0",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.1.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "husky": "^9.0.11",
+    "hygen": "^6.2.11",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.5",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": "18.x",
+    "pnpm": "8"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "lint:eslint": "turbo run lint:eslint",
+    "lint:prettier": "turbo run lint:prettier",
+    "fix": "pnpm recursive run fix",
+    "fix:eslint": "pnpm recursive run fix:eslint",
+    "fix:prettier": "pnpm recursive run fix:prettier",
+    "web:storybook": "pnpm --filter @portal/web run storybook",
+    "web:snapshot:update": "pnpm --filter @portal/web run test:dom:update"
+  }
+}

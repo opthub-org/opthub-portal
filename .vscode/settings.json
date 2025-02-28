@@ -1,0 +1,71 @@
+{
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // タブのサイズをスペース2つ分に調整
+  "editor.tabSize": 2,
+  // ファイルを自動保存する
+  "files.autoSave": "onFocusChange",
+  // デフォルトのフォーマッタを prettier に設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ファイル保存時、prettier による自動フォーマット
+  "editor.formatOnSave": true,
+  // ファイル保存時、ESLint による自動フォーマット
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "eslint.workingDirectories": [
+    {
+      "pattern": "./packages/*/"
+    },
+    {
+      "pattern": "./apps/*/"
+    }
+  ],
+  // EmmetをReactでも有効化
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // スペルチェックに単語を追加
+  "cSpell.userWords": ["ryuji"],
+  "cSpell.words": [
+    "AWSJSON",
+    "awssqs",
+    "clickaway",
+    "Codegen",
+    "codemirror",
+    "cvpath",
+    "cvpaths",
+    "dompurify",
+    "easymde",
+    "firestore",
+    "fontsource",
+    "GSISK",
+    "hookform",
+    "hygen",
+    "hypervolume",
+    "Kaggle",
+    "Katex",
+    "Leaderboard",
+    "Millis",
+    "nextjs",
+    "noreferrer",
+    "overridable",
+    "preinstall",
+    "sankey",
+    "signup",
+    "spectaql",
+    "splitted",
+    "swiper",
+    "tsdoc",
+    "urql",
+    "vercel",
+    "opthub"
+  ],
+  // ファイル保存時に最終行に改行を追加
+  "files.insertFinalNewline": true,
+  // 末尾の不要な空白を削除
+  "files.trimTrailingWhitespace": true
+}
