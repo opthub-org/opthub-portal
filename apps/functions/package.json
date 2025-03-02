@@ -2,7 +2,7 @@
   "name": "@portal/functions",
   "packageManager": "pnpm@8.1.0",
   "scripts": {
-    "exec": "GCLOUD_PROJECT=opthub-portal IS_LOCAL=true ts-node -r tsconfig-paths/register",
+    "exec:prod": "GCLOUD_PROJECT=opthub-portal IS_LOCAL=true pnpm ts-node -r tsconfig-paths/register",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint --quiet .",
     "lint:prettier": "prettier --check .",
@@ -22,6 +22,7 @@
   "main": "dist/index.js",
   "dependencies": {
     "@portal/universal_modules": "file:../../packages/universal_modules",
+    "axios": "^1.8.1",
     "dotenv": "^16.4.5",
     "firebase-admin": "^11.8.0",
     "firebase-functions": "^6.0.1"

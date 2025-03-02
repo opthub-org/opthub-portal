@@ -13,11 +13,12 @@ export const createAccount = onCall('createAccount', async ({ auth }) => {
   const now = Timestamp.now()
   const account: Admin<Account> = {
     id: auth.uid,
+    name: 'unknown',
+    type: 'outsourcing',
+    hourlyWage: [],
     createdAt: now,
     updatedAt: now,
-    isEnabled: false,
-    discord: null,
-    slack: null
+    isEnabled: false
   }
   await accountRef(auth.uid).set(account)
   logger.info(`Account created: ${auth.uid}`)

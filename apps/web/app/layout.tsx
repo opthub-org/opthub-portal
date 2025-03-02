@@ -1,10 +1,11 @@
 import { ThemeProvider } from '@/context/theme'
+import { CssBaseline } from '@mui/material'
+import type { Metadata } from 'next'
+
 import '@fontsource/noto-sans-jp/400.css' // 通常のウェイト
 import '@fontsource/noto-sans-jp/700.css' // 太字
 import '@fontsource/noto-sans/400.css' // 通常のウェイト
 import '@fontsource/noto-sans/700.css' // 太字
-import { CssBaseline } from '@mui/material'
-import type { Metadata } from 'next'
 
 export const dynamicParams = false
 

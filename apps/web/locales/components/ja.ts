@@ -1,7 +1,9 @@
 import auth from './auth/ja.json'
+import layouts from './layouts/ja.json'
 
 const components = {
-  auth
+  auth,
+  layouts
 }
 
 export default components

@@ -1,0 +1,17 @@
+{
+  "locales": {
+    "ja": "日本語",
+    "en": "英語"
+  },
+  "locale_codes": {
+    "ja": "JA",
+    "en": "EN"
+  },
+  "actions": {
+    "edit": "編集",
+    "delete": "削除"
+  },
+  "confirm": {
+    "delete": "本当に削除しますか？"
+  }
+}

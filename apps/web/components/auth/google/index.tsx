@@ -26,7 +26,6 @@ export const GoogleOAuthButton = ({ children }: Props) => {
   return (
     <LoadingButton
       variant="outlined"
-      fullWidth
       loading={isGoogleSigningIn}
       startIcon={<GoogleIcon width={24} height={24} />}
       onClick={async () => {

@@ -57,6 +57,41 @@ export const getYYYYMMDD = (date: Date): YYYYMMDD => {
 }
 
 /**
+ * 日付をMM/DD形式で取得する
+ * @param date - 日付
+ */
+export const getMMDD = (date: Date): string => {
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${month}/${day}`
+}
+
+/**
+ * 日付をHH:MM:SS形式で取得する
+ * @param date - 日付
+ */
+export const getHHMMSS = (date: Date): string => {
+  const hours = String(date.getHours()).padStart(2, '0')
+  const minutes = String(date.getMinutes()).padStart(2, '0')
+  const seconds = String(date.getSeconds()).padStart(2, '0')
+  return `${hours}:${minutes}:${seconds}`
+}
+
+/**
+ * 時間をHH:MM:SS形式で取得する
+ * @param time - 時間
+ */
+export const getHHMMSSTime = (time: number): string => {
+  const second = Math.floor(time / 1000) % 60
+  const minute = Math.floor(time / 1000 / 60) % 60
+  const hour = Math.floor(time / 1000 / 60 / 60)
+  const hourStr = String(hour).padStart(2, '0')
+  const minuteStr = String(minute).padStart(2, '0')
+  const secondStr = String(second).padStart(2, '0')
+  return `${hourStr}:${minuteStr}:${secondStr}`
+}
+
+/**
  * 週の初めを取得する関数
  * @param date - 日付
  */

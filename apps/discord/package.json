@@ -2,7 +2,7 @@
   "name": "@portal/discord",
   "packageManager": "pnpm@8.1.0",
   "scripts": {
-    "start_bot": "GCLOUD_PROJECT=opthub-portal ts-node -r tsconfig-paths/register ./src/bot.ts"
+    "start_bot": "GCLOUD_PROJECT=opthub-portal GOOGLE_APPLICATION_CREDENTIALS=./secrets/credential.json ts-node -r tsconfig-paths/register ./src/bot.ts"
   },
   "engines": {
     "node": "20",

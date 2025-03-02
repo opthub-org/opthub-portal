@@ -6,7 +6,7 @@ import { accountRef, getOrCreateCurrentUserAccount } from '@/models/account'
 import { Account, Client } from '@portal/universal_modules/schema'
 import { isBlank } from '@portal/universal_modules/utils'
 import { User } from 'firebase/auth'
-import { createContext, useEffect } from 'react'
+import { createContext, useEffect, useMemo } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useDocumentData } from 'react-firebase-hooks/firestore'
 
@@ -23,7 +23,7 @@ const initialUserState: UserState = {
   isAuthenticated: undefined,
   isAuthLoading: true,
   account: undefined,
-  isAccountLoading: false
+  isAccountLoading: true
 }
 
 export const UserStateContext = createContext<UserState>(initialUserState)
@@ -39,17 +39,17 @@ type Props = {
 export const UserProvider = ({ children }: Props) => {
   const [user, authLoading, authError] = useAuthState(fb.auth)
   useErrorLogger(authError)
+  const isAuthenticated = user !== undefined ? user !== null : undefined
 
   useEffect(() => {
     if (isBlank(user)) return
     getOrCreateCurrentUserAccount().catch(console.error)
   }, [user])
 
-  const [account, accountLoading] = useDocumentData(
-    user ? accountRef(user.uid) : null
-  )
-
-  const isAuthenticated = user !== undefined ? user !== null : undefined
+  const [account] = useDocumentData(user ? accountRef(user.uid) : null)
+  const isAccountLoading = useMemo(() => {
+    return !account
+  }, [account])
 
   return (
     <UserStateContext.Provider
@@ -58,7 +58,7 @@ export const UserProvider = ({ children }: Props) => {
         isAuthenticated,
         isAuthLoading: authLoading,
         account,
-        isAccountLoading: accountLoading
+        isAccountLoading
       }}
     >
       {children}

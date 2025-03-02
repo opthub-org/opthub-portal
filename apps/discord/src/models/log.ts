@@ -5,7 +5,6 @@ import { ColRef } from './type'
 
 /**
  * Discordのログのコレクションの参照
- * @param discordUid - DiscordユーザID
  */
 export const logsRef = fb.db
   .collection('discord_logs')
@@ -13,6 +12,6 @@ export const logsRef = fb.db
 
 /**
  * Discordのログのドキュメントの参照
- * @param id - ユーザID
+ * @param id - ログのID
  */
 export const logRef = (id: string) => logsRef.doc(id)

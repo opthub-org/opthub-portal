@@ -1,0 +1,12 @@
+{
+  "menus": {
+    "home": "ホーム",
+    "attendance": "勤怠管理",
+    "setting": "設定"
+  },
+  "header": {
+    "avatar_menu": {
+      "sign_out": "ログアウト"
+    }
+  }
+}
