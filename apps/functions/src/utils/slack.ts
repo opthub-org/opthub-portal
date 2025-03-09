@@ -15,7 +15,7 @@ export const sendToSlack = async (message: string, channel: string) => {
     }
 
     const response = await axios.post(
-      'https://hooks.slack.com/services/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',
+      'https://hooks.slack.com/services/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',
       payload,
       {
         headers: {
