@@ -15,7 +15,7 @@ export const sendToSlack = async (message: string, channel: string) => {
     }
 
     const response = await axios.post(
-      'https://hooks.slack.com/services/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',
+      'https://hooks.slack.com/services/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',
       payload,
       {
         headers: {
@@ -30,6 +30,7 @@ export const sendToSlack = async (message: string, channel: string) => {
     }
     console.log('Message sent to Slack successfully.')
   } catch (error: unknown) {
-    console.error('Error sending message to Slack')
+    console.log('Error sending message to Slack')
+    console.error(error)
   }
 }
