@@ -33,7 +33,7 @@ export const onCall = <T extends keyof Functions>(
     {
       region: DEFAULT_REGION,
       memory: '512MiB',
-      cors: [/^(.*\.)?portal.opthub\.ai$/],
+      cors: [/^(.*\.)?opthub\.ai$/],
       ...options
     },
     (req) => {
